@@ -1,0 +1,23 @@
+flows:
+  election_program:
+    description: This flow provides users with information about the current election program and additional insights.
+    steps:
+      - collect: topic
+        description: The specific topic the user wants to know about.
+      - action: action_fetch_election_info
+        next:
+          - if: not slots.election_info_found
+            then:
+              - action: utter_no_info_found
+                next: END
+          - else: provide_information
+      - action: utter_provide_information
+        id: provide_information
+      - collect: additional_questions
+        description: Ask if the user has further questions
+        next:
+          - if: not slots.additional_questions
+            then:
+              - action: utter_goodbye
+                next: END
+          - else: election_program
