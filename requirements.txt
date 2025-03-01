@@ -74,10 +74,6 @@ jsonpointer==3.0.0
 jsonschema==4.17.3
 keras==2.12.0
 kiwisolver==1.4.8
-langchain==0.3.19
-langchain-core==0.3.37
-langchain-text-splitters==0.3.6
-langchain-together==0.1.5
 langsmith==0.3.10
 libclang==18.1.1
 locket==1.0.0
@@ -92,7 +88,6 @@ multidict==5.2.0
 mypy-extensions==1.0.0
 networkx==2.6.3
 oauthlib==3.2.2
-openai==1.63.2
 opentelemetry-api==1.16.0
 opentelemetry-exporter-otlp-proto-grpc==1.16.0
 opentelemetry-proto==1.16.0
