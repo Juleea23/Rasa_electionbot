@@ -116,9 +116,9 @@ psycopg2-binary==2.9.10
 pyasn1==0.6.1
 pyasn1_modules==0.4.1
 pycparser==2.22
-pydantic==1.10.9
-pydantic-settings==2.8.0
-pydantic_core==2.27.2
+pydantic
+pydantic-settings
+pydantic_core
 pydot==1.4.2
 PyJWT==2.10.1
 pykwalify==1.8.0
