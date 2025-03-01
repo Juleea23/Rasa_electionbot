@@ -1,11 +1,11 @@
+--upgrade pip
 rasa==3.6.21
 rasa-sdk==3.6.2
 tensorflow==2.12.0
 numpy==1.23.0
 scipy
 pydantic==1.10.9
-pydantic-settings==1.0.3
-pydantic_core==2.14.6
+pydantic_core==1.14.6
 sklearn-crfsuite
 scikit-learn
 requests
