@@ -100,7 +100,7 @@ opentelemetry-sdk==1.16.0
 opentelemetry-semantic-conventions==0.37b0
 opt_einsum==3.4.0
 orjson==3.10.15
-packaging==20.9
+packaging
 pamqp==3.2.1
 partd==1.4.2
 pdfminer.six==20231228
