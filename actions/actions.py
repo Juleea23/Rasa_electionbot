@@ -4,7 +4,7 @@ import requests
 
 def query_langchain(question, party=None, topic=None):
     """Sendet eine Anfrage an den LangChain-Server und verarbeitet die Antwort."""
-    url = "http://localhost:5001/query"  # Flask-Server mit LangChain läuft hier
+    url = "https://langchain-electionbot.onrender.com"  # Flask-Server mit LangChain läuft hier
     
     payload = {"question": question}
     if party:
