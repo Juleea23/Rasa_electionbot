@@ -164,9 +164,7 @@ tarsafe==0.0.4
 tenacity==8.5.0
 tensorboard==2.12.3
 tensorboard-data-server
-tensorflow-hub==0.13.0
 tensorflow-cpu
-tensorflow-io-gcs-filesystem==0.31.0
 termcolor==2.5.0
 terminaltables==3.1.10
 threadpoolctl==3.5.0
