@@ -91,7 +91,6 @@ msgpack==1.1.0
 multidict==5.2.0
 mypy-extensions==1.0.0
 networkx==2.6.3
-numpy==1.23.5
 oauthlib==3.2.2
 openai==1.63.2
 opentelemetry-api==1.16.0
@@ -197,3 +196,4 @@ wrapt==1.14.1
 wsproto==1.2.0
 yarl==1.18.3
 zstandard==0.23.0
+numpy
