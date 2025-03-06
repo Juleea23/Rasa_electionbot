@@ -136,5 +136,7 @@ def generate_readable_response(documents):
 
 if __name__ == "__main__":
     import os
-    port = int(os.environ.get("PORT", 5001))  # <-- WICHTIG
-    app.run(host="0.0.0.0", port=5001, debug=True)  # <-- WICHTIG
+    port = int(os.environ.get("PORT", 5001))
+    print(f"🚀 Starte Flask auf Port {port}...")
+    app.run(host="0.0.0.0", port=port, debug=True)
+
