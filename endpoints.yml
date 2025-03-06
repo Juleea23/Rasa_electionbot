@@ -1,6 +1,6 @@
 action_endpoint:
-  url: "https://langchain-electionbot.onrender.com/query"
-
+  #url: "https://langchain-electionbot.onrender.com/query"
+  url: "http://0.0.0.0:10000"
 # This file contains the different endpoints your bot can use.
 
 # Server where the models are pulled from.
