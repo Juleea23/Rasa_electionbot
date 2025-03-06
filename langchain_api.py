@@ -123,12 +123,12 @@ def generate_readable_response(documents):
         return "Ich konnte leider keine passenden Informationen in den Wahlprogrammen finden."
 
     # Fasse die wichtigsten Punkte zusammen
-    summary = "\n".join(["- " + doc.replace("\n", " ") for doc in documents[:3]])  # Max. 3 Sätze
+    summary = "\n".join(["- " + doc.replace("\n", " ") for doc in documents[:5]])  # Max. 5 Sätze
     
     response = (
         "Hier sind einige relevante Aussagen aus dem Wahlprogramm:\n\n"
         f"{summary}\n\n"
-        "Falls du weitere Details benötigst, stelle gerne eine genauere Frage! 😊"
+        "Falls du mehr Informationen benötigst, stelle gerne eine weitere Frage! 😊"
     )
     
     return response
@@ -136,7 +136,6 @@ def generate_readable_response(documents):
 
 if __name__ == "__main__":
     import os
-    port = int(os.environ.get("PORT", 5001))
+    port = int(os.environ.get("PORT", 15001))
     print(f"🚀 Starte Flask auf Port {port}...")
     app.run(host="0.0.0.0", port=port, debug=True)
-
