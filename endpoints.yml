@@ -1,5 +1,5 @@
 action_endpoint:
-  url: "https://langchain-electionbot.onrender.com"
+  url: "https://langchain-electionbot.onrender.com/query"
 
 # This file contains the different endpoints your bot can use.
 
