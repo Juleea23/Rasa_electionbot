@@ -48,34 +48,7 @@ def extract_text_with_ocr(pdf_path):
                 text += pytesseract.image_to_string(img)
     return text
 
-def process_pdfs():
-    """Liest alle PDFs ein, erstellt Embeddings und speichert sie in FAISS."""
-    print("🔄 Keine bestehende Datenbank gefunden – starte Verarbeitung der PDFs...")
 
-    embedding = HuggingFaceEmbeddings(model_name=MODEL_NAME)
-    text_splitter = RecursiveCharacterTextSplitter(chunk_size=500, chunk_overlap=100)
-
-    all_texts = []
-    all_metadata = []
-
-    for pdf_path in glob.glob(os.path.join(DATA_FOLDER, "*.pdf")):
-        party = os.path.basename(pdf_path).replace(".pdf", "").lower()
-
-        text = extract_text_from_pdf(pdf_path)  # Nutzt pdfplumber für saubere Extraktion
-
-        if not text.strip():  
-            print(f"⚠️ Kein Text in {pdf_path} erkannt – versuche OCR...")
-            text = extract_text_with_ocr(pdf_path)  # Falls kein Text erkannt, OCR nutzen
-
-        if text.strip():
-            chunks = text_splitter.split_text(text)
-            all_texts.extend(chunks)
-            all_metadata.extend([{"source": party}] * len(chunks))
-
-    if all_texts:
-        db = FAISS.from_texts(all_texts, embedding, metadatas=all_metadata)
-        db.save_local(VECTOR_DB_PATH)
-        print("✅ PDF-Verarbeitung abgeschlossen und Datenbank gespeichert!")
 
 # Prüfe, ob der Index existiert – falls nicht, PDFs verarbeiten
 if not os.path.exists(VECTOR_DB_PATH):
