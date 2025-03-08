@@ -3,9 +3,10 @@ from langchain_community.vectorstores import FAISS
 from langchain_huggingface import HuggingFaceEmbeddings
 from sentence_transformers import SentenceTransformer
 from langchain.text_splitter import RecursiveCharacterTextSplitter
-import os
 import glob
 import pdfplumber
+import os
+print(f"🔍 Render-Umgebungsvariablen: {os.environ}")
 
 app = Flask(__name__)
 
