@@ -6,8 +6,12 @@ from huggingface_hub import InferenceClient, login
 import traceback
 import os
 os.environ["CUDA_VISIBLE_DEVICES"] = "-1"
+os.environ["TF_FORCE_GPU_ALLOW_GROWTH"] = "false"
+os.environ["TF_ENABLE_ONEDNN_OPTS"] = "0"
 import spacy  # Neu: Für automatische Wortstamm-Erkennung
 from spacy.lang.de.examples import sentences
+print("CUDA verfügbar:", tf.test.is_built_with_cuda())
+print("GPU erkannt:", tf.config.list_physical_devices('GPU'))
 
 # 🔐 API-Login
 HUGGINGFACEHUB_API_TOKEN = SECRETCODE
