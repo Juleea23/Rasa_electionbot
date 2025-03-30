@@ -114,4 +114,3 @@ wrapt==1.17.2
 yarl==1.18.3
 zstandard==0.23.0
 pip==25.0.1
-pip uninstall -y nvidia-cublas nvidia-cuda-runtime nvidia-cuda-cupti nvidia-cudnn nvidia-cufft nvidia-curand nvidia-cusolver nvidia-cusparse
