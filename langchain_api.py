@@ -5,6 +5,7 @@ from sentence_transformers import SentenceTransformer, util
 from huggingface_hub import InferenceClient, login
 import traceback
 import os
+os.environ["CUDA_VISIBLE_DEVICES"] = "-1"
 import spacy  # Neu: Für automatische Wortstamm-Erkennung
 from spacy.lang.de.examples import sentences
 
