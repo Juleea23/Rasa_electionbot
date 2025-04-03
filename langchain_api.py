@@ -10,8 +10,8 @@ os.environ["TF_FORCE_GPU_ALLOW_GROWTH"] = "false"
 os.environ["TF_ENABLE_ONEDNN_OPTS"] = "0"
 import spacy  # Neu: Für automatische Wortstamm-Erkennung
 from spacy.lang.de.examples import sentences
-print("CUDA verfügbar:", tf.test.is_built_with_cuda())
-print("GPU erkannt:", tf.config.list_physical_devices('GPU'))
+#print("CUDA verfügbar:", tf.test.is_built_with_cuda())
+#print("GPU erkannt:", tf.config.list_physical_devices('GPU'))
 tf.config.set_visible_devices([], 'GPU')
 torch.backends.cudnn.enabled = False
 torch.cuda.is_available = lambda: False
